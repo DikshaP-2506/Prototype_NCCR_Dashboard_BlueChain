@@ -139,29 +139,29 @@ export function UnifiedDashboard({ onLogout }: UnifiedDashboardProps) {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
+      {/* Header - Dark Navy Blue */}
+      <header className="border-b border-sidebar-border bg-sidebar backdrop-blur-sm sticky top-0 z-50">
         <div className="flex h-16 items-center justify-between px-6">
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2">
-              <Shield className="h-8 w-8 text-primary" />
+              <Shield className="h-8 w-8 text-sidebar-primary" />
               <div>
-                <h1 className="text-xl font-bold">NCCR Verifier Dashboard</h1>
-                <p className="text-sm text-muted-foreground">Blue Carbon Project Verification System</p>
+                <h1 className="text-xl font-bold text-sidebar-foreground">NCCR Verifier Dashboard</h1>
+                <p className="text-sm text-sidebar-foreground/70">Blue Carbon Project Verification System</p>
               </div>
             </div>
           </div>
 
           <div className="flex items-center space-x-4">
-            <Button variant="outline" size="sm">
+            <Button variant="outline" size="sm" className="border-sidebar-border bg-sidebar-accent text-sidebar-accent-foreground hover:bg-sidebar-accent/80">
               <PlayCircle className="h-4 w-4 mr-2" />
               Guide Video
             </Button>
-            <Button variant="outline" size="sm">
+            <Button variant="outline" size="sm" className="border-sidebar-border bg-sidebar-accent text-sidebar-accent-foreground hover:bg-sidebar-accent/80">
               <Share2 className="h-4 w-4 mr-2" />
               Share Impact
             </Button>
-            <Button variant="ghost" size="sm" onClick={onLogout}>
+            <Button variant="ghost" size="sm" onClick={onLogout} className="text-sidebar-foreground hover:bg-sidebar-accent">
               <LogOut className="h-4 w-4 mr-2" />
               Logout
             </Button>
@@ -170,8 +170,8 @@ export function UnifiedDashboard({ onLogout }: UnifiedDashboardProps) {
       </header>
 
       <div className="flex">
-        {/* Sidebar Navigation */}
-        <nav className="w-64 border-r border-border bg-card/30 min-h-[calc(100vh-4rem)]">
+        {/* Sidebar Navigation - Bright theme */}
+        <nav className="w-64 border-r border-border bg-card/80 min-h-[calc(100vh-4rem)]">
           <div className="p-4 space-y-2">
             <Button
               variant={activeTab === "overview" ? "default" : "ghost"}

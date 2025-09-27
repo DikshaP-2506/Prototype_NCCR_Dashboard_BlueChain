@@ -89,25 +89,25 @@ export function VerifierDashboard({ onLogout }: VerifierDashboardProps) {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
+      {/* Header - Dark Navy Blue */}
+      <header className="border-b border-sidebar-border bg-sidebar backdrop-blur-sm sticky top-0 z-50">
         <div className="flex h-16 items-center justify-between px-6">
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2">
-              <Eye className="h-8 w-8 text-primary" />
+              <Eye className="h-8 w-8 text-sidebar-primary" />
               <div>
-                <h1 className="text-xl font-bold">Verifier Dashboard</h1>
-                <p className="text-sm text-muted-foreground">Project Verification Portal</p>
+                <h1 className="text-xl font-bold text-sidebar-foreground">Verifier Dashboard</h1>
+                <p className="text-sm text-sidebar-foreground/70">Project Verification Portal</p>
               </div>
             </div>
           </div>
 
           <div className="flex items-center space-x-4">
-            <Button variant="outline" size="sm">
+            <Button variant="outline" size="sm" className="border-sidebar-border bg-sidebar-accent text-sidebar-accent-foreground hover:bg-sidebar-accent/80">
               <PlayCircle className="h-4 w-4 mr-2" />
               Guide Video
             </Button>
-            <Button variant="ghost" size="sm" onClick={onLogout}>
+            <Button variant="ghost" size="sm" onClick={onLogout} className="text-sidebar-foreground hover:bg-sidebar-accent">
               <LogOut className="h-4 w-4 mr-2" />
               Logout
             </Button>
