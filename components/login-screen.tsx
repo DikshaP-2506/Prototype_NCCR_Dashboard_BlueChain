@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Label } from "@/components/ui/label"
+import { Logo } from "@/components/ui/logo"
 import { Shield, Waves, PlayCircle } from "lucide-react"
 
 interface LoginScreenProps {
@@ -36,11 +37,8 @@ export function LoginScreen({ onLogin }: LoginScreenProps) {
       <div className="relative z-10 w-full max-w-md space-y-8">
         {/* Header */}
         <div className="text-center space-y-4">
-          <div className="flex items-center justify-center space-x-2">
-            <div className="relative">
-              <Waves className="h-12 w-12 text-primary" />
-              <Shield className="h-6 w-6 text-accent absolute -top-1 -right-1" />
-            </div>
+          <div className="flex items-center justify-center">
+            <Logo width={80} height={80} showText={false} variant="square" />
           </div>
           <div>
             <h1 className="text-3xl font-bold text-balance">NCCR Verifier Portal</h1>

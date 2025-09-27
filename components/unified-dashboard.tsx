@@ -4,6 +4,8 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { ThemeToggle } from "@/components/theme-provider"
+import { Logo } from "@/components/ui/logo"
 import {
   Shield,
   Users,
@@ -141,10 +143,10 @@ export function UnifiedDashboard({ onLogout }: UnifiedDashboardProps) {
     <div className="min-h-screen bg-background">
       {/* Header - Dark Navy Blue */}
       <header className="border-b border-sidebar-border bg-sidebar backdrop-blur-sm sticky top-0 z-50">
-        <div className="flex h-16 items-center justify-between px-6">
+        <div className="flex h-20 items-center justify-between px-6">
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2">
-              <Shield className="h-8 w-8 text-sidebar-primary" />
+              <Logo width={40} height={40} showText={false} variant="rounded" className="text-sidebar-primary" />
               <div>
                 <h1 className="text-xl font-bold text-sidebar-foreground">NCCR Verifier Dashboard</h1>
                 <p className="text-sm text-sidebar-foreground/70">Blue Carbon Project Verification System</p>
@@ -153,6 +155,7 @@ export function UnifiedDashboard({ onLogout }: UnifiedDashboardProps) {
           </div>
 
           <div className="flex items-center space-x-4">
+            <ThemeToggle className="text-sidebar-foreground hover:bg-sidebar-accent" />
             <Button variant="outline" size="sm" className="border-sidebar-border bg-sidebar-accent text-sidebar-accent-foreground hover:bg-sidebar-accent/80">
               <PlayCircle className="h-4 w-4 mr-2" />
               Guide Video
@@ -171,7 +174,7 @@ export function UnifiedDashboard({ onLogout }: UnifiedDashboardProps) {
 
       <div className="flex">
         {/* Sidebar Navigation - Bright theme */}
-        <nav className="w-64 border-r border-border bg-card/80 min-h-[calc(100vh-4rem)]">
+        <nav className="w-64 border-r border-border bg-card/80 min-h-[calc(100vh-5rem)]">
           <div className="p-4 space-y-2">
             <Button
               variant={activeTab === "overview" ? "default" : "ghost"}
